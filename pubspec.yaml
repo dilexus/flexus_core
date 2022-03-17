@@ -10,9 +10,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
   #Dev
-  get: ^4.6.1
   lifecycle: ^0.4.3
+
+  #UI
+  google_fonts: ^2.3.1
+
+  #API
+  dio: ^4.0.4
+  json_annotation: any
+  json_serializable: any
+  retrofit: any
 
 dev_dependencies:
   flutter_test:
