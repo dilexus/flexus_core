@@ -1,6 +1,6 @@
 name: flexus_core
 description: Flexus Core Library.
-version: 1.0.7+7
+version: 1.0.8+8
 homepage:
 
 environment:
@@ -33,6 +33,11 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
+flutter_gen:
+  output: lib/app/config/gen
+  assets:
+    enabled: true
+
 flutter:
 
   # To add assets to your package, add an assets section, like this:
