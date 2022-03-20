@@ -1,6 +1,6 @@
 name: flexus_core
 description: Flexus Core Library.
-version: 1.0.5+5
+version: 1.0.6+6
 homepage:
 
 environment:
@@ -16,6 +16,7 @@ dependencies:
 
   #UI
   google_fonts: ^2.3.1
+  sizer: ^2.0.15
 
   #API
   dio: ^4.0.4
