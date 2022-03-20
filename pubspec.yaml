@@ -1,6 +1,6 @@
 name: flexus_core
 description: Flexus Core Library.
-version: 1.0.6+6
+version: 1.0.7+7
 homepage:
 
 environment:
@@ -18,15 +18,15 @@ dependencies:
   google_fonts: ^2.3.1
   sizer: ^2.0.15
 
-  #API
-  dio: ^4.0.4
-  json_annotation: any
-  json_serializable: any
-  retrofit: any
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  #Runner
+  build_runner: any
+  flutter_gen_runner:
+
   flutter_lints: ^1.0.4
 
 # For information on the generic Dart part of this file, see the
