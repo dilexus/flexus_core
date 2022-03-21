@@ -1,47 +1,50 @@
 import 'package:flutter/widgets.dart';
 import 'package:lifecycle/lifecycle.dart';
 
-abstract class ScreenWidget extends StatelessWidget {
-  const ScreenWidget({Key? key}) : super(key: key);
+class AppScreen extends StatelessWidget {
+  final Widget child;
+  final Function? onPush;
+  final Function? onVisible;
+  final Function? onActive;
+  final Function? onInactive;
+  final Function? onHide;
+  final Function? onPop;
+  const AppScreen(
+      {required this.child,
+      this.onPush,
+      this.onVisible,
+      this.onActive,
+      this.onInactive,
+      this.onHide,
+      this.onPop,
+      Key? key})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return LifecycleWrapper(
         onLifecycleEvent: (LifecycleEvent event) {
           switch (event) {
             case LifecycleEvent.push:
-              onPush();
+              if (onPush != null) onPush!();
               break;
             case LifecycleEvent.visible:
-              onVisible();
+              if (onVisible != null) onVisible!();
               break;
             case LifecycleEvent.active:
-              onActive();
+              if (onActive != null) onActive!();
               break;
             case LifecycleEvent.inactive:
-              onInactive();
+              if (onInactive != null) onInactive!();
               break;
             case LifecycleEvent.invisible:
-              onHide();
+              if (onHide != null) onHide!();
               break;
             case LifecycleEvent.pop:
-              onPop();
+              if (onPop != null) onPop!();
               break;
           }
         },
-        child: buildScreen(context));
+        child: child);
   }
-
-  Widget buildScreen(BuildContext context);
-
-  void onPush() {}
-
-  void onVisible() {}
-
-  void onActive() {}
-
-  void onInactive() {}
-
-  void onHide() {}
-
-  void onPop() {}
 }
