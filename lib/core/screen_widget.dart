@@ -1,16 +1,19 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:lifecycle/lifecycle.dart';
 
 class AppScreen extends StatelessWidget {
   final Widget child;
+  final bool withSafeArea;
   final Function? onPush;
   final Function? onVisible;
   final Function? onActive;
   final Function? onInactive;
   final Function? onHide;
   final Function? onPop;
+
   const AppScreen(
       {required this.child,
+      this.withSafeArea = true,
       this.onPush,
       this.onVisible,
       this.onActive,
@@ -22,6 +25,16 @@ class AppScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (withSafeArea) {
+      return SafeArea(
+        child: _withLifecycle(child),
+      );
+    } else {
+      return _withLifecycle(child);
+    }
+  }
+
+  Widget _withLifecycle(Widget widget) {
     return LifecycleWrapper(
         onLifecycleEvent: (LifecycleEvent event) {
           switch (event) {
@@ -45,6 +58,6 @@ class AppScreen extends StatelessWidget {
               break;
           }
         },
-        child: child);
+        child: widget);
   }
 }
