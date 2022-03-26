@@ -3,7 +3,6 @@ import 'package:lifecycle/lifecycle.dart';
 
 class AppScreen extends StatelessWidget {
   final Widget child;
-  final bool withSafeArea;
   final Function? onPush;
   final Function? onVisible;
   final Function? onActive;
@@ -13,7 +12,6 @@ class AppScreen extends StatelessWidget {
 
   const AppScreen(
       {required this.child,
-      this.withSafeArea = true,
       this.onPush,
       this.onVisible,
       this.onActive,
@@ -23,15 +21,19 @@ class AppScreen extends StatelessWidget {
       Key? key})
       : super(key: key);
 
+  const factory AppScreen.safeArea({
+    required Widget child,
+    Function? onPush,
+    Function? onVisible,
+    Function? onActive,
+    Function? onInactive,
+    Function? onHide,
+    Function? onPop,
+  }) = _AppScreenWithSafeArea;
+
   @override
   Widget build(BuildContext context) {
-    if (withSafeArea) {
-      return SafeArea(
-        child: _withLifecycle(child),
-      );
-    } else {
-      return _withLifecycle(child);
-    }
+    return _withLifecycle(child);
   }
 
   Widget _withLifecycle(Widget widget) {
@@ -59,5 +61,29 @@ class AppScreen extends StatelessWidget {
           }
         },
         child: widget);
+  }
+}
+
+class _AppScreenWithSafeArea extends AppScreen {
+  const _AppScreenWithSafeArea({
+    required Widget child,
+    Function? onPush,
+    Function? onVisible,
+    Function? onActive,
+    Function? onInactive,
+    Function? onHide,
+    Function? onPop,
+  }) : super(
+            child: child,
+            onPush: onPush,
+            onVisible: onVisible,
+            onActive: onActive,
+            onInactive: onInactive,
+            onHide: onHide,
+            onPop: onPop);
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(child: super.build(context));
   }
 }
