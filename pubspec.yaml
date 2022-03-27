@@ -12,11 +12,11 @@ dependencies:
     sdk: flutter
 
   #Dev
-  get: ^4.6.1
-  lifecycle: ^0.4.3
+  get: any
+  lifecycle: any
 
   #UI
-  loading_overlay: ^0.3.0
+  loading_overlay: any
   sizer: any
 
 
