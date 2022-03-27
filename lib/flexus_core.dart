@@ -11,11 +11,17 @@ class FlexusCore {
   static FlexusCore get instance => _instance;
 
   Widget getApp(Widget app, {bool devicePreview = false}) {
-    return DevicePreview(
-        enabled: devicePreview,
-        builder: (context) =>
-            Sizer(builder: (context, orientation, deviceType) {
-              return app;
-            }));
+    if (devicePreview) {
+      return DevicePreview(
+          enabled: devicePreview,
+          builder: (context) =>
+              Sizer(builder: (context, orientation, deviceType) {
+                return app;
+              }));
+    } else {
+      return Sizer(builder: (context, orientation, deviceType) {
+        return app;
+      });
+    }
   }
 }
