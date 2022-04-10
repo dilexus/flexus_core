@@ -5,6 +5,7 @@ class AppScreen extends StatelessWidget {
   final Widget child;
   final Function? onPush;
   final Function? onVisible;
+  final Function? onAnalytics;
   final Function? onActive;
   final Function? onInactive;
   final Function? onHide;
@@ -14,6 +15,7 @@ class AppScreen extends StatelessWidget {
       {required this.child,
       this.onPush,
       this.onVisible,
+      this.onAnalytics,
       this.onActive,
       this.onInactive,
       this.onHide,
@@ -25,6 +27,7 @@ class AppScreen extends StatelessWidget {
     required Widget child,
     Function? onPush,
     Function? onVisible,
+    Function? onAnalytics,
     Function? onActive,
     Function? onInactive,
     Function? onHide,
@@ -45,6 +48,7 @@ class AppScreen extends StatelessWidget {
               break;
             case LifecycleEvent.visible:
               if (onVisible != null) onVisible!();
+              if (onAnalytics != null) onAnalytics!();
               break;
             case LifecycleEvent.active:
               if (onActive != null) onActive!();
@@ -69,6 +73,7 @@ class _AppScreenWithSafeArea extends AppScreen {
     required Widget child,
     Function? onPush,
     Function? onVisible,
+    Function? onAnalytics,
     Function? onActive,
     Function? onInactive,
     Function? onHide,
@@ -77,6 +82,7 @@ class _AppScreenWithSafeArea extends AppScreen {
             child: child,
             onPush: onPush,
             onVisible: onVisible,
+            onAnalytics: onAnalytics,
             onActive: onActive,
             onInactive: onInactive,
             onHide: onHide,
