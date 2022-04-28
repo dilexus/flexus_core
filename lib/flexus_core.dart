@@ -2,13 +2,19 @@ library flexus_core;
 
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 import 'package:sizer/sizer.dart';
 
 /// A Calculator.
-class FlexusCore {
-  FlexusCore._privateConstructor();
-  static final FlexusCore _instance = FlexusCore._privateConstructor();
-  static FlexusCore get instance => _instance;
+class FC {
+  late Logger log;
+  FC._privateConstructor();
+  static final FC _instance = FC._privateConstructor();
+  static FC get instance => _instance;
+
+  init(Logger log) {
+    this.log = log;
+  }
 
   Widget getApp(Widget app, {bool devicePreview = false}) {
     if (devicePreview) {

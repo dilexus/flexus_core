@@ -1,6 +1,6 @@
 name: flexus_core
 description: Flexus Core Library.
-version: 1.0.15+15
+version: 1.0.16+16
 homepage:
 
 environment:
@@ -12,8 +12,9 @@ dependencies:
     sdk: flutter
 
   #Dev
+  logger: ^1.1.0
   get: ^4.6.1
-  lifecycle: ^0.4.3
+  lifecycle: ^0.4.4
 
   #UI
   loading_overlay: ^0.3.0
