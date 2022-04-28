@@ -6,11 +6,11 @@ import 'package:logger/logger.dart';
 import 'package:sizer/sizer.dart';
 
 /// A Calculator.
-class FC {
+class Fc {
   late Logger log;
-  FC._privateConstructor();
-  static final FC _instance = FC._privateConstructor();
-  static FC get instance => _instance;
+  Fc._privateConstructor();
+  static final Fc _instance = Fc._privateConstructor();
+  static Fc get instance => _instance;
 
   init(Logger log) {
     this.log = log;
