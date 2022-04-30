@@ -1,6 +1,6 @@
 name: flexus_core
 description: Flexus Core Library.
-version: 1.0.19+19
+version: 1.0.20+20
 homepage:
 
 environment:
@@ -20,6 +20,7 @@ dependencies:
   loading_overlay: ^0.3.0
   sizer: ^2.0.15
   device_preview: ^1.0.0
+  device_preview_screenshot: ^1.0.0
 
 
 dev_dependencies:

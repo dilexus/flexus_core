@@ -1,4 +1,5 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:device_preview_screenshot/device_preview_screenshot.dart';
 import 'package:flexus_core/app/utils/common.dart';
 import 'package:flexus_core/app/utils/dialog.dart';
 import 'package:flexus_core/app/utils/string.dart';
@@ -27,6 +28,10 @@ class Fc {
   Widget getApp(Widget app, {bool devicePreview = false}) {
     if (devicePreview) {
       return DevicePreview(
+          tools: const [
+            ...DevicePreview.defaultTools,
+            DevicePreviewScreenshot(),
+          ],
           enabled: devicePreview,
           builder: (context) =>
               Sizer(builder: (context, orientation, deviceType) {
