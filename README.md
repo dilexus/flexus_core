@@ -1,24 +1,28 @@
 # Flexus Getting Started Flutter Framework Flexus Core
 
+[![pub package](https://img.shields.io/pub/v/shared_preferences.svg)](https://pub.dev/packages/flexus_core)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
 
 This is an Open Source Framework to create application with Flutter. This framework can be used to create an apps for both Android and iOS platforms.
 
-
 ### Features
+
 This package contains generic features for creating application
 
 ## Libraries Used
-* get
-* logger
-* lifecycle
-* sizer
-* loading overlay  
-* device preview
+
+- get
+- logger
+- lifecycle
+- sizer
+- loading overlay
+- device preview
 
 ## License (MIT)
+
 Copyright (c) 2021 Chatura Dilan Perera
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,5 +44,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Support
-Please contact dilan@dilan.me for support and Sample Application
 
+Please contact dilan@dilan.me for support and Sample Application
