@@ -5,17 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "flexus_core",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "flexus_core (profile mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
             "name": "flexus_core (release mode)",
             "request": "launch",
             "type": "dart",

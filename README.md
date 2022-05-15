@@ -1,6 +1,6 @@
 # Flexus Getting Started Flutter Framework Flexus Core
 
-Version 3.3.2
+Version 3.3.2+1
 
 ## Getting Started
 

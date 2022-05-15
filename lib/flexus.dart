@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:device_preview_screenshot/device_preview_screenshot.dart';
 import 'package:flexus_core/app/utils/common.dart';
 import 'package:flexus_core/app/utils/dialog.dart';
