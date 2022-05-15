@@ -1,7 +1,5 @@
 # Flexus Getting Started Flutter Framework Flexus Core
 
-Version 3.3.2+1
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
