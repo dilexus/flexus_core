@@ -1,6 +1,6 @@
 # Flexus Getting Started Flutter Framework Flexus Core
 
-[![pub package](https://img.shields.io/pub/v/shared_preferences.svg)](https://pub.dev/packages/flexus_core)
+Version 3.3.2
 
 ## Getting Started
 
