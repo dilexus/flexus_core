@@ -31,6 +31,7 @@ build/
 release
 .env
 .flutter-plugins-dependencies
+.flutter-plugins
 android/fastlane/report.xml
 android/key.properties
 .fvm/flutter_sdk
