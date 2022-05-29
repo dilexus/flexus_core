@@ -1,6 +1,6 @@
 name: flexus_core
 description: Flexus Core Library.
-version: 3.3.24
+version: 3.3.25
 homepage: https://dilexusit.com
 
 environment:
@@ -19,7 +19,7 @@ dependencies:
   #UI
   loading_overlay: ^0.3.0
   sizer: ^2.0.15
-  device_preview: ^1.0.0
+  device_preview: ^1.1.0
   device_preview_screenshot: ^1.0.0
 
 
