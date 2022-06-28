@@ -21,3 +21,6 @@
 
 ## 3.3.35
 * New Release
+
+## 3.3.36
+* New Release
