@@ -9,10 +9,10 @@ class HomeScreen extends StatelessWidget {
     return AppScreen.safeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Hi"),
+          title: const Text('Hi'),
         ),
         body: const Center(
-          child: Text("Welcome to Flexus"),
+          child: Text('Welcome to Flexus'),
         ),
       ),
     );
