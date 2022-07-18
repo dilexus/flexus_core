@@ -1,5 +1,4 @@
 class FxStringUtil {
-
   String getInitials({required String string, required int limitTo}) {
     var buffer = StringBuffer();
     var split = string.split(' ');
@@ -7,7 +6,9 @@ class FxStringUtil {
       limitTo = split.length;
     }
     for (var i = 0; i < limitTo; i++) {
-      buffer.write(split[i][0]);
+      if (split[i].isNotEmpty) {
+        buffer.write(split[i][0]);
+      }
     }
 
     return buffer.toString();
