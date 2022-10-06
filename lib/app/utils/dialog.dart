@@ -57,7 +57,7 @@ class FxDialogUtil {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          primary: Get.theme.colorScheme.primary,
+          backgroundColor: Get.theme.colorScheme.primary,
           elevation: 0,
         ),
         child: Text(
