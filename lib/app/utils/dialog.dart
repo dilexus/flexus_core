@@ -9,15 +9,15 @@ class FxDialogUtil {
   static FxDialogUtil get instance => _instance;
 
   showOKDialog(
-      {required String message,
-      required String title,
+      {required String title,
+      String? message,
+      Widget? content,
       String? textOK,
       VoidCallback? onOKPressed,
-      Widget? content,
       bool barrierDismissible = false}) {
     Get.defaultDialog(
         title: title,
-        middleText: message,
+        middleText: message!,
         barrierDismissible: barrierDismissible,
         backgroundColor: Get.theme.colorScheme.background,
         content: content,
@@ -27,17 +27,17 @@ class FxDialogUtil {
   }
 
   showYesNoDialog(
-      {required String message,
-      required String title,
+      {required String title,
+      String? message,
+      Widget? content,
       String? textYes,
       String? textNo,
       VoidCallback? onYesPressed,
       VoidCallback? onNoPressed,
-      Widget? content,
       bool barrierDismissible = false}) {
     Get.defaultDialog(
         title: title,
-        middleText: message,
+        middleText: message!,
         content: content,
         backgroundColor: Get.theme.colorScheme.background,
         barrierDismissible: barrierDismissible,
